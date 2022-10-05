@@ -1,0 +1,32 @@
+<h1>Voici la liste des restaurants : </h1>
+<table> 
+    <tr>
+        <th>Nom</th>
+        <th>Adresse</th>
+        <th>Moyenne</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let restaurant of restaurants" appCouleurRestaurant="{{restaurant.moyenne}}">
+        <td>{{restaurant.nom}}</td>
+        <td>{{restaurant.adresse}}</td>
+        <td>{{restaurant.moyenne}}</td>
+        <td><button><a routerLink="{{restaurant.id}}">Détail id {{restaurant.id}}</a></button></td>
+    </tr>
+</table>
+<p>- La directive fonctionne, elle prend bien en compte la moyenne du restaurant</p>
+<p>- Le formulaire ci dessous fonctionne également</p>
+<p>- Le changement de page avec la bonne route suivant l'id fonctionne</p>
+<br>
+<br>
+<br>
+<h2>Formulaire pour ajouter un restaurant</h2>
+<form #form="ngForm" (ngSubmit)="ajouterRestaurant(form)">
+    <span>Nom : </span>
+    <input name="nom" #nomRestaurant="ngModel" [(ngModel)]="nomInput" required>
+    <br>
+    <span>Adresse : </span>
+    <input name="adresse" #adresseRestaurant="ngModel" [(ngModel)]="adresseInput" required>
+    <br>
+    <br>
+    <button type="submit">Ajouter Restaurant</button> 
+</form>

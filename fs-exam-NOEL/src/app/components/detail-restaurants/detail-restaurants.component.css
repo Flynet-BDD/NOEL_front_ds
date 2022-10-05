@@ -1,0 +1,41 @@
+table
+{
+    border-width:1px; 
+    border-style:solid; 
+    border-color:black;
+    width:50%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+th, td 
+{
+    padding: 12px 15px;
+}
+
+th 
+{ 
+    border-width:1px;
+    border-style:solid; 
+    border-color:black;
+    width:50%;
+}
+
+td
+{ 
+    border-width:1px;
+    border-style:solid; 
+    border-color:black;
+    width:50%;
+    color:rgb(48, 37, 7);
+}
